@@ -1,0 +1,2 @@
+yfinance==0.2.20
+selenium==4.9.0
