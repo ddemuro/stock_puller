@@ -1,0 +1,16 @@
+services:
+  puller:
+    build: .
+    container_name: puller
+    environment:
+      PYTHONUNBUFFERED: 1
+      PYTHONDONTWRITEBYTECODE: 1
+      PYTHONPATH: /app
+      # INFILE: m1data.csv
+      # OUTFILE: m1data_out.csv
+    working_dir: /app
+    dns:
+      - 1.1.1.1
+    volumes:
+      - ./:/app
+    command: python3 get_info_stocks.py -i stocks.txt

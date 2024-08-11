@@ -185,5 +185,6 @@ def get_stock_info(symbol):
         'Recommend. EBITDA Margins': rebitda_margins,
         'Recommend. D/E': rdebt_to_equity,
         'Recommend. P/E': rpe_ratio,
-        'P/E': pe_ratio
+        'P/E': pe_ratio,
+        'Date': datetime.datetime.now().strftime("%Y-%m-%d")
     }
